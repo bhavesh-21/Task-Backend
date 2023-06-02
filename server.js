@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://0.0.0.0:27017/task-manager-db', {
+mongoose.connect(process.env.M, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
